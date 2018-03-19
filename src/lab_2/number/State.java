@@ -4,7 +4,7 @@ class State{
 
 
     boolean goal(){
-
+        return false;
     }
     public String toString(){
         return  "->> ";

@@ -1,7 +1,7 @@
-import static lab_2.number.number.execute;
+
 
 public class Main {
     public static void main(String[] args) {
-        execute();
+        lab_2.eight_pazzle.eight_pazzle.execute();
     }
 }
