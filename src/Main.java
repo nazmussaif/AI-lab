@@ -1,8 +1,7 @@
-import lab_1.jug.jug;
-import lab_1.missionaries_and_cannibals.missionaries_and_cannibals;
+import static lab_2.number.number.execute;
 
 public class Main {
     public static void main(String[] args) {
-        missionaries_and_cannibals.execute();
+        execute();
     }
 }
