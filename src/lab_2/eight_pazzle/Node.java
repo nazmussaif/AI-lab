@@ -58,9 +58,10 @@ public class Node implements Comparable<Node> {
 
 	public int heuristic() {
 		// Use one of the following three heuristic function calls
-		return state.manhattan_distance();
+		//return state.manhattan_distance();
 		// return state.misplaced_tiles();
 		// return state.tiles_out_of_row_or_column();
+		return state.sld();
 	}
 
 	public String toString() {

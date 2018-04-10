@@ -5,7 +5,7 @@ import java.util.Collections;
 
 public class eight_pazzle {
     //    change the value of N for NxN board
-    static final int N = 3;
+    static final int N = 2;
     public static void execute() {
         System.out.println("Eight Pazzle: ");
 

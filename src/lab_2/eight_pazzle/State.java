@@ -1,6 +1,8 @@
 package lab_2.eight_pazzle;
 
 import static java.lang.Math.abs;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 
 public class State {
     private static int goal[][];
@@ -106,6 +108,19 @@ public class State {
                     h += (i == pos[0]) ? 0 : 1;
                     h += (j == pos[1]) ? 0 : 1;
                 }
+            }
+        }
+        return h;
+    }
+
+    public int sld(){
+        int h = 0;
+        for (int i = 0; i < eight_pazzle.N; ++i) {
+            for (int j = 0; j < eight_pazzle.N; ++j) {
+                int v = board[i][j];
+                int[] target = getGoalPosition(v);
+                //System.out.println(i + " " +  j + " " + " " + target[0] + " " + target[1]);
+                h += sqrt( pow(i-target[0], 2) + pow(j-target[1], 2));
             }
         }
         return h;
