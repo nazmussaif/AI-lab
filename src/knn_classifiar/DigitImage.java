@@ -7,7 +7,7 @@ public class DigitImage {
 	public DigitImage(int[] pixels, int digit) {
 		super();
 
-		this.pixels = pixels.clone();
+		this.pixels = (int[]) pixels.clone();
 		this.digit = digit;
 	}
 }

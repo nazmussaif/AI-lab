@@ -13,7 +13,7 @@ public class knn_execute {
     final static int FEATURES = 400;
     final static int CLASSES = 10;
     final static int K = 50;
-    final static double trainingSetFrac = 0.5;
+    final static double trainingSetFrac = 0.99;
 
     static ArrayList<DigitImage> images, trainingSet, testSet;
 
@@ -67,12 +67,13 @@ public class knn_execute {
     }
 
     static double measure_accuracy(kNN_Classifier kNN) {
-
         double correctPrediction = 0;
 
         // Complete here
-
-
+        for(DigitImage test: testSet) {
+           if(kNN.classify(test) == test.digit)
+               correctPrediction++;
+        }
         return correctPrediction / testSet.size();
     }
 
@@ -107,6 +108,7 @@ class DigitDisplay extends JFrame {
                 data[i][j] = d[i * 20 + j];
         setSize(400, 400);
         setVisible(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
     public void paint(Graphics g) {
